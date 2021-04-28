@@ -34,12 +34,12 @@ function FilteredEventsPage() {
   const filteredMonth = +filterData[1];
 
   if (
-    isNaN(filterYear) ||
-    isNaN(filterMonth) ||
-    filterYear > 2030 ||
-    filterYear < 2010 ||
-    filterMonth > 12 ||
-    filterMonth < 1 ||
+    isNaN(filteredYear) ||
+    isNaN(filteredMonth) ||
+    filteredYear > 2030 ||
+    filteredYear < 2010 ||
+    filteredMonth > 12 ||
+    filteredMonth < 1 ||
     error
   ) {
     return (
@@ -75,7 +75,7 @@ function FilteredEventsPage() {
     );
   }
 
-  const constructedDate = new Date(filteredYear, filterMonth - 1);
+  const constructedDate = new Date(filteredYear, filteredMonth - 1);
 
   return (
     <Fragment>
